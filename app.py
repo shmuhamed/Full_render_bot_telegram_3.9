@@ -1,11 +1,4 @@
-# FILE: requirements.txt
-fastapi==0.115.6
-uvicorn==0.32.1
-aiogram==3.13.1
-aiosqlite==0.20.0
-python-multipart==0.0.17
-itsdangerous==2.2.0
-jinja2==3.1.4
+
 
 # FILE: app.py
 """
@@ -1341,4 +1334,5 @@ async def admin_leads(request: Request, _: Any = Depends(admin_required)) -> HTM
         )
     body.append("</tbody></table>")
     return render_template("admin_table.html", title="Заявки", tab="leads", heading="📝 Заявки на продажу авто", create_href=None, body="".join(body))
+
 
