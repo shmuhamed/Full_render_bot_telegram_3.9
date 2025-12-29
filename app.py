@@ -13,7 +13,7 @@ All-in-one: FastAPI website + Admin panel + Telegram bot (aiogram v3) with webho
 Deploy-friendly for Render Web Service.
 
 ENV:
-  BOT_TOKEN=...
+  BOT_TOKEN=8586126815:AAHAGyah7Oz-8mHzUcFvRcHV3Dsug3sPT4g
   PUBLIC_URL=https://your-app.onrender.com
   WEBHOOK_SECRET=long-random
   SECRET_KEY=long-random
@@ -1341,3 +1341,4 @@ async def admin_leads(request: Request, _: Any = Depends(admin_required)) -> HTM
         )
     body.append("</tbody></table>")
     return render_template("admin_table.html", title="Заявки", tab="leads", heading="📝 Заявки на продажу авто", create_href=None, body="".join(body))
+
